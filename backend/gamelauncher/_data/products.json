@@ -1,36 +1,6 @@
 [
   {
     "gameId": 0,
-    "title": "",
-    "price": 0,
-    "summary": "",
-    "description": "",
-    "releaseDate": "",
-    "developer": [],
-    "publisher": [],
-    "tags": [],
-    "rating": "",
-    "trailerLink": "",
-    "coverImage": "",
-    "productImages": [],
-    "reviews": "",
-    "minimumSystemRequirements": {
-      "operatingSystem": "",
-      "processor": "",
-      "memory": "",
-      "graphics": "",
-      "storage": ""
-    },
-    "recommendedSystemRequirements": {
-      "operatingSystem": "",
-      "processor": "",
-      "memory": "",
-      "graphics": "",
-      "storage": ""
-    }
-  },
-  {
-    "gameId": 1,
     "title": "Call of Duty®: Modern Warfare® II",
     "price": 59.99,
     "summary": "Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141.",
@@ -81,7 +51,7 @@
     }
   },
   {
-    "gameId": 2,
+    "gameId": 1,
     "title": "Elden Ring",
     "price": 49.99,
     "summary": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
@@ -125,7 +95,7 @@
     }
   },
   {
-    "gameId": 3,
+    "gameId": 2,
     "title": "God of War",
     "price": 39.99,
     "summary": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",

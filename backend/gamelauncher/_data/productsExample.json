@@ -1,0 +1,32 @@
+[
+  {
+    "gameId": 0,
+    "title": "",
+    "price": 0,
+    "summary": "",
+    "description": "",
+    "releaseDate": "",
+    "developer": [],
+    "publisher": [],
+    "tags": [],
+    "rating": "",
+    "trailerLink": "",
+    "coverImage": "",
+    "productImages": [],
+    "reviews": "",
+    "minimumSystemRequirements": {
+      "operatingSystem": "",
+      "processor": "",
+      "memory": "",
+      "graphics": "",
+      "storage": ""
+    },
+    "recommendedSystemRequirements": {
+      "operatingSystem": "",
+      "processor": "",
+      "memory": "",
+      "graphics": "",
+      "storage": ""
+    }
+  }
+]
