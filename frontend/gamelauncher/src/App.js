@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavBar from './components/NavBar/mainNavBar';
+import MainNavBar from './components/navbar/mainNavBar';
 
 const App = () => {
     return (
