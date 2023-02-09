@@ -1,0 +1,171 @@
+[
+  {
+    "gameId": 0,
+    "title": "",
+    "price": 0,
+    "summary": "",
+    "description": "",
+    "releaseDate": "",
+    "developer": [],
+    "publisher": [],
+    "tags": [],
+    "rating": "",
+    "trailerLink": "",
+    "coverImage": "",
+    "productImages": [],
+    "reviews": "",
+    "minimumSystemRequirements": {
+      "operatingSystem": "",
+      "processor": "",
+      "memory": "",
+      "graphics": "",
+      "storage": ""
+    },
+    "recommendedSystemRequirements": {
+      "operatingSystem": "",
+      "processor": "",
+      "memory": "",
+      "graphics": "",
+      "storage": ""
+    }
+  },
+  {
+    "gameId": 1,
+    "title": "Call of Duty®: Modern Warfare® II",
+    "price": 59.99,
+    "summary": "Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141.",
+    "description": "Welcome to the new era of Call of Duty®.\n\nCall of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141. From small-scale, high-stakes infiltration tactical ops to highly classified missions, players will deploy alongside friends in a truly immersive experience.\n\nInfinity Ward brings fans state-of-the-art gameplay, with all-new gun handling, advanced AI system, a new Gunsmith and a suite of other gameplay and graphical innovations that elevate the franchise to new heights.\n\nModern Warfare® II launches with a globe-trotting single-player campaign, immersive Multiplayer combat and a narrative-driven, co-op Special Ops experience.\n\nYou also get access to Call of Duty®: Warzone™ 2.0, the all-new Battle Royale experience.",
+    "releaseDate": "28-10-2022",
+    "developer": [
+      "Infinity Ward",
+      "Raven Software",
+      "Beenox",
+      "Treyarch",
+      "High Moon Studios",
+      "Sledgehammer Games",
+      "Activision Shanghai",
+      "Demonware",
+      "Toys for Bob"],
+    "publisher": [
+      "Activision"
+    ],
+    "tags": [
+      "FPS",
+      "Action",
+      "Multiplayer",
+      "Shooter",
+      "Single-player"
+    ],
+    "rating": "PEGI-18",
+    "ratingDescription": [
+      "Violence",
+      "Bad language"
+    ],
+    "trailerLink": "",
+    "coverImage": "",
+    "productImages": [],
+    "reviews": 0,
+    "minimumSystemRequirements": {
+      "operatingSystem": "Windows® 10 64 Bit (latest update)",
+      "processor": "Intel® Core™ i3-6100 / Core™ i5-2500K or AMD Ryzen™ 3 1200",
+      "memory": "8 GB RAM",
+      "graphics": "NVIDIA® GeForce® GTX 960 or AMD Radeon™ RX 470 - DirectX 12.0 compatible system",
+      "storage": "125 GB available space"
+    },
+    "recommendedSystemRequirements": {
+      "operatingSystem": "Windows® 10 64 Bit (latest update) or Windows® 11 64 Bit (latest update)",
+      "processor": "Intel® Core™ i5-6600K / Core™ i7-4770 or AMD Ryzen™ 5 1400",
+      "memory": "12 GB RAM",
+      "graphics": "NVIDIA® GeForce® GTX 1060 or AMD Radeon™ RX 580 - DirectX 12.0 compatible system",
+      "storage": "125 GB available space"
+    }
+  },
+  {
+    "gameId": 2,
+    "title": "Elden Ring",
+    "price": 49.99,
+    "summary": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    "description": "THE NEW FANTASY ACTION RPG.\n\nRise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.\n\nA vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected. As you explore, the joy of discovering unknown and overwhelming threats await you, leading to a high sense of accomplishment.",
+    "releaseDate": "24-02-2022",
+    "developer": [
+      "FromSoftware Inc."
+    ],
+    "publisher": [
+      "FromSoftware Inc.",
+      "Bandai Namco Entertainment"
+    ],
+    "tags": [
+      "Souls-like",
+      "Dark fantasy",
+      "RPG",
+      "Open World",
+      "3D"
+    ],
+    "rating": "PEGI-16",
+    "ratingDescription": [
+      "Violence"
+    ],
+    "trailerLink": "",
+    "coverImage": "",
+    "productImages": [],
+    "reviews": 0,
+    "minimumSystemRequirements": {
+      "operatingSystem": "Windows® 10 64 Bit (latest update)",
+      "processor": "INTEL CORE I5-8400 or AMD RYZEN 3 3300X",
+      "memory": "12 GB RAM",
+      "graphics": "NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB",
+      "storage": "60 GB available space"
+    },
+    "recommendedSystemRequirements": {
+      "operatingSystem": "Windows® 10 64 Bit (latest update) or Windows® 11 64 Bit (latest update)",
+      "processor": "INTEL CORE I7-8700K or AMD RYZEN 5 3600X",
+      "memory": "16 GB RAM",
+      "graphics": "NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB",
+      "storage": "60 GB available space"
+    }
+  },
+  {
+    "gameId": 3,
+    "title": "God of War",
+    "price": 39.99,
+    "summary": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+    "description": "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.\n\nKratos is a father again. As mentor and protector to Atreus, a son determined to earn his respect, he is forced to deal with and control the rage that has long defined him while out in a very dangerous world with his son.",
+    "releaseDate": "14-01-2022",
+    "developer": [
+      "Santa Monica Studio"
+    ],
+    "publisher": [
+      "PlayStation PC LLC"
+    ],
+    "tags": [
+      "Action",
+      "Single-player",
+      "Adventure",
+      "Story Rich",
+      "3D"
+    ],
+    "rating": "PEGI-18",
+    "ratingDescription": [
+      "Violence",
+      "Bad language"
+    ],
+    "trailerLink": "",
+    "coverImage": "",
+    "productImages": [],
+    "reviews": 0,
+    "minimumSystemRequirements": {
+      "operatingSystem": "Windows® 10 64-bit (version 1809)",
+      "processor": "Intel i5-2500k (4 core 3.3 GHz) or AMD Ryzen 3 1200 (4 core 3.1 GHz)",
+      "memory": "8 GB RAM",
+      "graphics": "NVIDIA GTX 960 (4 GB) or AMD R9 290X (4 GB)",
+      "storage": "70 GB available space"
+    },
+    "recommendedSystemRequirements": {
+      "operatingSystem": "Windows® 10 64-bit (version 1809)",
+      "processor": "Intel i5-6600k (4 core 3.5 GHz) or AMD Ryzen 5 2400 G (4 core 3.6 GHz)",
+      "memory": "8 GB RAM",
+      "graphics": "NVIDIA GTX 1060 (6 GB) or AMD RX 570 (4 GB)",
+      "storage": "70 GB available space"
+    }
+  }
+]
