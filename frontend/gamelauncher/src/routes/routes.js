@@ -20,4 +20,12 @@ export const routes = [
         path: "/support",
         element: <Support />,
     },
+    // {
+    //     path: "/register",
+    //     element: <Register />,
+    // },
+    // {
+    //     path: "/login",
+    //     element: <Login />,
+    // },
 ]
