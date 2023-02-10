@@ -11,8 +11,6 @@ public class User {
     @Id
     private Integer id;
 
-    private Integer userId;
-
     private String firstName;
 
     private String lastName;
@@ -30,10 +28,6 @@ public class User {
 
     public Integer getId() { return id; }
     public void setId(Integer _id) {this.id = _id; }
-
-    public Integer getUserId() { return userId; }
-
-    public void setUserId(Integer _userId) { this.userId = _userId; }
 
     public String getFirstName() { return firstName; }
 

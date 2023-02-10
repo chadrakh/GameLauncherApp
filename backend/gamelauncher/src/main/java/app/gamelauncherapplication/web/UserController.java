@@ -22,9 +22,9 @@ public class UserController {
         return userService.get();
     }
 
-    @GetMapping("/users/{userId}")
-    public User get(@PathVariable Integer userId) {
-        User requestedUser = userService.get(userId);
+    @GetMapping("/users/{id}")
+    public User get(@PathVariable Integer id) {
+        User requestedUser = userService.get(id);
         if (requestedUser == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedUser;
@@ -35,8 +35,8 @@ public class UserController {
         return userService.add(newUser.getEmail(), newUser.getPassword());
     }
 
-    @DeleteMapping("/users/{userId}")
-    public void delete(@PathVariable Integer userId) {
-        userService.remove(userId);
+    @DeleteMapping("/users/{id}")
+    public void delete(@PathVariable Integer id) {
+        userService.remove(id);
     }
 }

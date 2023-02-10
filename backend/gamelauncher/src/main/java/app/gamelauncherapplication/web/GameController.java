@@ -22,9 +22,9 @@ public class GameController {
         return gameService.get();
     }
 
-    @GetMapping("/games/{gameId}")
-    public Game get(@PathVariable  Integer gameId) {
-        Game requestedGame = gameService.get(gameId);
+    @GetMapping("/games/{id}")
+    public Game get(@PathVariable  Integer id) {
+        Game requestedGame = gameService.get(id);
         if (requestedGame == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedGame;
@@ -35,9 +35,9 @@ public class GameController {
         return gameService.add(newGame.getTitle());
     }
 
-    @DeleteMapping("/games/{gameId}")
-    public void delete(@PathVariable Integer gameId) {
-        gameService.remove(gameId);
+    @DeleteMapping("/games/{id}")
+    public void delete(@PathVariable Integer id) {
+        gameService.remove(id);
     }
 
 }

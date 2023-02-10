@@ -1,6 +1,6 @@
 CREATE TABLE Users
 (
-    id bigint IDENTITY PRIMARY KEY,
+    id INT PRIMARY KEY,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     full_name VARCHAR(255),
@@ -10,7 +10,7 @@ CREATE TABLE Users
 
 CREATE TABLE Games
 (
-    id bigint IDENTITY PRIMARY KEY,
+    id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     price DECIMAL(4, 2),
     summary VARCHAR(300),
@@ -24,18 +24,15 @@ CREATE TABLE Games
     trailer_link VARCHAR(255),
     cover_image VARCHAR(255),
     product_images VARCHAR(255),
-    reviews tinyint,
-    recommended_system_requirements_id bigint,
-    FOREIGN KEY (recommended_system_requirements_id) REFERENCES RecommendedSystemRequirements(id),
-    minimum_system_requirements_id bigint,
-    FOREIGN KEY (minimum_system_requirements_id) REFERENCES MinimumSystemRequirements(id)
+    reviews INT,
+    recommended_system_requirements INT,
+    minimum_system_requirements INT
 );
 
 CREATE TABLE MinimumSystemRequirements
 (
-    id bigint IDENTITY PRIMARY KEY,
-    game_id bigint,
-    FOREIGN KEY (game_id) REFERENCES Games(id),
+    id INT PRIMARY KEY,
+    game_id INT,
     operating_system VARCHAR(255),
     processor VARCHAR(255),
     memory VARCHAR(255),
@@ -45,12 +42,19 @@ CREATE TABLE MinimumSystemRequirements
 
 CREATE TABLE RecommendedSystemRequirements
 (
-    id bigint IDENTITY PRIMARY KEY,
-    game_id bigint,
-    FOREIGN KEY (game_id) REFERENCES Games(id),
+    id INT PRIMARY KEY,
+    game_id INT,
     operating_system VARCHAR(255),
     processor VARCHAR(255),
     memory VARCHAR(255),
     graphics VARCHAR(255),
     storage VARCHAR(255)
 );
+
+ALTER TABLE Games
+    ADD FOREIGN KEY (recommended_system_requirements)
+        REFERENCES RecommendedSystemRequirements(id);
+
+ALTER TABLE Games
+    ADD FOREIGN KEY (minimum_system_requirements)
+        REFERENCES MinimumSystemRequirements(id);
