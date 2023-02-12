@@ -13,11 +13,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route key={pageRoutes[0].id} path={pageRoutes[0].path} element={pageRoutes[0].element}>
-          {pageRoutes.map((page) => (
+      {pageRoutes.map((page) => (
             <Route key={page.id} path={page.path} element={page.element} />
           ))}
-        </Route>
+        {/* <Route key={pageRoutes[0].id} path={pageRoutes[0].path} element={pageRoutes[0].element}>
+        </Route> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

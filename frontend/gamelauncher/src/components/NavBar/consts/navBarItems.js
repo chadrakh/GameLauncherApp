@@ -6,8 +6,8 @@ const mainNavListItems = [
     {
         id: 0,
         icon: <LocalGroceryStoreIcon />,
-        label: 'Store',
-        route: 'store'
+        label: 'Wishlist',
+        route: 'wishlist'
     },
     {
         id: 1,
