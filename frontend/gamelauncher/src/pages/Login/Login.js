@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+
 
 const Login = () => {
   const [btnDisabled, setBtnDisabled] = useState(true);
 
   return (
-    <Box
+    <Grid  item xs={8}>
+      <Box
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch'}
@@ -42,7 +45,8 @@ const Login = () => {
           Login
         </Button>
       </div>
-    </Box>
+      </Box>
+    </Grid>
   )
 }
 

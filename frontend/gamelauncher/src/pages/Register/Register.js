@@ -1,66 +1,75 @@
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
 
 const Register = () => {
-  const [isDisabled, setIsDisabled] = useState(true);
+  // const [isDisabled, setIsDisabled] = useState(true);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPasswword] = useState("");
+  const [password2, setPasswword2] = useState("");
 
   const checkPasswordsMatch = () => {
-    const password = document.getElementById("password");
-    const confirmPassword = document.getElementById("password");
+    return password === password2 ? true : false;
+  };
 
-    return password === confirmPassword ? true : false;
-  }
-
-  const addUser = () => {
+  const baseURL = "http://localhost:8080";
+  const updateOrAddUser = async () => {
     const newUser = {
-      forename: document.querySelector("forename"),
-      surname: document.querySelector("surname"),
-      email: document.querySelector("email"),
-      username: document.querySelector("username"),
-      password: document.querySelector("password"),
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
     };
 
-    console.table(newUser)
-    /*
-    fetch(`/users/add/${newUser}`, {
-      method: 'POST',
+    console.table(newUser);
+    console.log(JSON.stringify(newUser));
+
+    await fetch(baseURL + "/users", {
+      method: "POST",
       headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
+        Accept: "application/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        newUser
-      }),
-    })
-    */
-  }
+      body: JSON.stringify(newUser),
+    });
+  };
 
   return (
-    <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div className="register-grid-align">
-        <h1>Register</h1>
-        <div className="register-container">
-          <div>
+    <Grid item xs={8}>
+      {/* <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <div className="register-grid-align">
+          <h1>Register</h1>
+          <div className="register-container">
             <div>
               <TextField
-                id="forename"
+                id="firstName"
                 label="First Name"
+                value={firstName}
+                onChange={(event) => {
+                  setFirstName(event.target.value);
+                }}
                 required
               />
             </div>
             <div>
               <TextField
-                id="surname"
+                id="lastName"
                 label="Last Name"
+                value={lastName}
+                onChange={(event) => {
+                  setLastName(event.target.value);
+                }}
                 required
               />
             </div>
@@ -69,52 +78,53 @@ const Register = () => {
                 id="email"
                 label="Email"
                 placeholder="example@email.com"
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                }}
                 required
               />
+            </div>
+            <div>
+              <div>
+                <TextField
+                  id="password"
+                  label="Password"
+                  type="password"
+                  value={password}
+                  onChange={(event) => {
+                    setPasswword(event.target.value);
+                  }}
+                  required
+                />
+              </div>
+              <div>
+                <TextField
+                  id="confirmPassword"
+                  label="Confirm Password"
+                  type="password"
+                  value={password2}
+                  onChange={(event) => {
+                    setPasswword2(event.target.value);
+                  }}
+                  onBlur={checkPasswordsMatch}
+                  required
+                />
+              </div>
             </div>
           </div>
-
-
-          <div className="register-vl"></div>
-          <div>
-            <div>
-              <TextField
-                id="username"
-                label="Username"
-                required
-              />
-            </div>
-            <div>
-              <TextField
-                id="password"
-                label="Password"
-                type="password"
-                required
-              />
-            </div>
-            <div>
-              <TextField
-                id="confirmPassword"
-                label="Confirm Password"
-                type="password"
-                onBlur={() => setIsDisabled(checkPasswordsMatch)}
-                required
-              />
-            </div>
-          </div>
+          <br></br>
+          <Button
+            id="registerSubmit"
+            variant="outlined"
+            onClick={updateOrAddUser}
+          >
+            Register
+          </Button>
         </div>
-        <br></br>
-        <Button
-          id="registerSubmit"
-          variant="outlined"
-          disabled={isDisabled}
-          onClick={addUser}
-        >
-          Register
-        </Button>
-      </div>
-    </Box>
-  )
-}
+      </Box> */}
+    </Grid>
+  );
+};
 
 export default Register;

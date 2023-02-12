@@ -8,7 +8,7 @@ const mainNavBarStyles = {
             backgroundColor: '#101F33',
         },
         '& .Mui-selected': {
-            color: 'red',
+            color: '#ffffff',
         },
     },
     icons: {

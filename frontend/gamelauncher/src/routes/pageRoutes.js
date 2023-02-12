@@ -1,6 +1,6 @@
 import App from "../App";
-import Store from "../pages/Store/Store";
-import Community from "../pages/Community/Community";
+import Browse from "../pages/Browse/Browse";
+import Library from "../pages/Library/Library";
 import Support from "../pages/Support/Support";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
@@ -13,13 +13,13 @@ const pageRoutes = [
     },
     {
         id: 1,
-        path: "/store",
-        element: <Store />,
+        path: "/browse",
+        element: <Browse />,
     },
     {
         id: 2,
-        path: "/community",
-        element: <Community />,
+        path: "/Library",
+        element: <Library />,
     },
     {
         id: 3,
