@@ -1,14 +1,20 @@
 package app.gamelauncherapplication.web;
 
 import app.gamelauncherapplication.model.Game;
+import app.gamelauncherapplication.model.User;
 import app.gamelauncherapplication.service.GameService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.net.URI;
+import java.net.URISyntaxException;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
+@RequestMapping("/games")
 public class GameController {
 
     private final GameService gameService;
@@ -17,22 +23,23 @@ public class GameController {
         this.gameService = gameService;
     }
 
-    @GetMapping("/games")
+    @GetMapping
     public Iterable<Game> get() {
-        return gameService.get();
+        return gameService.getUsers();
     }
 
-    @GetMapping("/games/{id}")
-    public Game get(@PathVariable  Integer id) {
-        Game requestedGame = gameService.get(id);
+    @GetMapping("/{id}")
+    public Game get(@PathVariable Integer id) {
+        Game requestedGame = gameService.getUser(id);
         if (requestedGame == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedGame;
     }
 
     @PostMapping("/games")
-    public Game create(@RequestBody @Valid Game newGame) {
-        return gameService.add(newGame);
+    public ResponseEntity<Game> create(@RequestBody Game game) throws URISyntaxException {
+        var savedGame = gameService.add(game);
+        return ResponseEntity.created(new URI("/games/" + savedGame.getId())).body(savedGame);
     }
 
     @DeleteMapping("/games/{id}")

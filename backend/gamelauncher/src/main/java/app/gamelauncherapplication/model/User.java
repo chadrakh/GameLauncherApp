@@ -15,8 +15,6 @@ public class User {
 
     private String lastName;
 
-    private String fullName;
-
     @NotEmpty
     @Email
     private String email;
@@ -29,25 +27,43 @@ public class User {
     public User(String _firstName, String _lastName, String _email, String _password) {
         this.firstName = _firstName;
         this.lastName = _lastName;
-        this.fullName = firstName + lastName;
         this.email = _email;
         this.password = _password;
     }
 
-    public Integer getId() { return id; }
-    public void setId(Integer _id) {this.id = _id; }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer _id) {
+        this.id = _id;
+    }
 
-    public String getFirstName() { return firstName; }
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String _firstName) {
+        this.firstName = _firstName;
+    }
 
-    public String getLastName() { return lastName; }
+    public String getLastName() {
+        return lastName;
+    }
+    public void setLastName(String _lastName) {
+        this.lastName = _lastName;
+    }
 
-    public String getFullName() { return fullName; }
 
     public String getEmail() {
         return email;
     }
+    public void setEmail(String _email) {
+        this.email = _email;
+    }
 
     public String getPassword() {
         return password;
+    }
+    public void setPassword(String _password) {
+        this.password = _password;
     }
 }

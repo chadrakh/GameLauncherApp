@@ -17,11 +17,11 @@ public class UserService {
         return newUser;
     }
 
-    public Iterable<User> get() {
+    public Iterable<User> getUsers() {
         return userRepository.findAll();
     }
 
-    public User get(Integer userId) {
+    public User getUser(Integer userId) {
         return userRepository.findById(userId).orElse(null);
     }
 

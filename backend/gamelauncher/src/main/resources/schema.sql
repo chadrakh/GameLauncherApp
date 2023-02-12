@@ -1,16 +1,15 @@
 CREATE TABLE IF NOT EXISTS Users
 (
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     first_name VARCHAR(255),
     last_name VARCHAR(255),
-    full_name VARCHAR(255),
     email VARCHAR(255),
     password VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Games
 (
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     price DECIMAL(4, 2),
     summary VARCHAR(300),
@@ -31,7 +30,7 @@ CREATE TABLE IF NOT EXISTS Games
 
 CREATE TABLE IF NOT EXISTS MinimumSystemRequirements
 (
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     game_id INT,
     operating_system VARCHAR(255),
     processor VARCHAR(255),
@@ -42,7 +41,7 @@ CREATE TABLE IF NOT EXISTS MinimumSystemRequirements
 
 CREATE TABLE IF NOT EXISTS RecommendedSystemRequirements
 (
-    id INT PRIMARY KEY,
+    id INT auto_increment PRIMARY KEY,
     game_id INT,
     operating_system VARCHAR(255),
     processor VARCHAR(255),

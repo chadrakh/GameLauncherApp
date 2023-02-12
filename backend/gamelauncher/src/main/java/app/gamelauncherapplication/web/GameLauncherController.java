@@ -8,6 +8,6 @@ public class GameLauncherController {
 
     @GetMapping("/")
     public String mapString() {
-        return "Game Launcher Application";
+        return "Game Launcher API";
     }
 }
