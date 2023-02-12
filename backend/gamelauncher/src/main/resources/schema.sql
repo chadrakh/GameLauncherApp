@@ -1,4 +1,4 @@
-CREATE TABLE Users
+CREATE TABLE IF NOT EXISTS Users
 (
     id INT PRIMARY KEY,
     first_name VARCHAR(255),
@@ -8,7 +8,7 @@ CREATE TABLE Users
     password VARCHAR(255)
 );
 
-CREATE TABLE Games
+CREATE TABLE IF NOT EXISTS Games
 (
     id INT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -25,11 +25,11 @@ CREATE TABLE Games
     cover_image VARCHAR(255),
     product_images VARCHAR(255),
     reviews INT,
-    recommended_system_requirements INT,
-    minimum_system_requirements INT
+    recommended_system_requirements_id INT,
+    minimum_system_requirements_id INT
 );
 
-CREATE TABLE MinimumSystemRequirements
+CREATE TABLE IF NOT EXISTS MinimumSystemRequirements
 (
     id INT PRIMARY KEY,
     game_id INT,
@@ -40,7 +40,7 @@ CREATE TABLE MinimumSystemRequirements
     storage VARCHAR(255)
 );
 
-CREATE TABLE RecommendedSystemRequirements
+CREATE TABLE IF NOT EXISTS RecommendedSystemRequirements
 (
     id INT PRIMARY KEY,
     game_id INT,
@@ -52,9 +52,9 @@ CREATE TABLE RecommendedSystemRequirements
 );
 
 ALTER TABLE Games
-    ADD FOREIGN KEY (recommended_system_requirements)
+    ADD FOREIGN KEY (recommended_system_requirements_id)
         REFERENCES RecommendedSystemRequirements(id);
 
 ALTER TABLE Games
-    ADD FOREIGN KEY (minimum_system_requirements)
+    ADD FOREIGN KEY (minimum_system_requirements_id)
         REFERENCES MinimumSystemRequirements(id);

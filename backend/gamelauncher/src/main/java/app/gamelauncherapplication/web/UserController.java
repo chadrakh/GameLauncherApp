@@ -32,7 +32,7 @@ public class UserController {
 
     @PostMapping("/users")
     public User create(@RequestBody @Valid User newUser) {
-        return userService.add(newUser.getFirstName(), newUser.getLastName(), newUser.getEmail(), newUser.getPassword());
+        return userService.add(newUser);
     }
 
     @DeleteMapping("/users/{id}")

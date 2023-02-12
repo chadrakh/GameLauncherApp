@@ -29,6 +29,7 @@ public class User {
     public User(String _firstName, String _lastName, String _email, String _password) {
         this.firstName = _firstName;
         this.lastName = _lastName;
+        this.fullName = firstName + lastName;
         this.email = _email;
         this.password = _password;
     }
@@ -41,6 +42,7 @@ public class User {
     public String getLastName() { return lastName; }
 
     public String getFullName() { return fullName; }
+
     public String getEmail() {
         return email;
     }

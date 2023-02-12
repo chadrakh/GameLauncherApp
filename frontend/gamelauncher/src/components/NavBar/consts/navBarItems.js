@@ -6,20 +6,20 @@ const mainNavListItems = [
     {
         id: 0,
         icon: <LocalGroceryStoreIcon />,
-        label: 'Wishlist',
-        route: 'wishlist'
+        label: 'Browse',
+        route: 'browse'
     },
     {
         id: 1,
         icon: <PeopleIcon />,
-        label: 'Community',
-        route: 'community'
+        label: 'My Library',
+        route: 'library'
     },
     {
         id: 2,
         icon: <ContactSupportIcon />,
-        label: 'Support',
-        route: 'support'
+        label: 'Help',
+        route: 'help'
     }
 ];
 
@@ -27,19 +27,7 @@ const subNavListItems = [
     {
         id: 0,
         icon: '',
-        label: '',
-        route: 'route'
-    },
-    {
-        id: 1,
-        icon: '',
-        label: '',
-        route: 'route'
-    },
-    {
-        id: 2,
-        icon: '',
-        label: '',
+        label: 'Login/Register',
         route: 'route'
     }
 ];

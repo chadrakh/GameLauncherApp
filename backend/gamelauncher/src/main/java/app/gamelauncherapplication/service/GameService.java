@@ -12,8 +12,7 @@ public class GameService {
         this.gameRepository = gameRepository;
     }
 
-    public Game add(String title) {
-        Game newGame = new Game();
+    public Game add(Game newGame) {
         gameRepository.save(newGame);
 
         return newGame;

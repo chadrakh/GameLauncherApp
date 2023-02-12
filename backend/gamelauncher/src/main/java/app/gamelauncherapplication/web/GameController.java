@@ -32,7 +32,7 @@ public class GameController {
 
     @PostMapping("/games")
     public Game create(@RequestBody @Valid Game newGame) {
-        return gameService.add(newGame.getTitle());
+        return gameService.add(newGame);
     }
 
     @DeleteMapping("/games/{id}")
