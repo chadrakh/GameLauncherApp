@@ -8,7 +8,7 @@ const mainNavListItems = [
         id: 0,
         icon: <HomeIcon />,
         label: 'Home',
-        route: ''
+        route: 'home'
     },
     {
         id: 1,

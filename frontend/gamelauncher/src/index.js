@@ -1,29 +1,29 @@
-import React from 'react';
-import './index.css';
-import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import { pageRoutes } from './routes/pageRoutes';
+import React from "react";
+import "./index.css";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { pageRoutes } from "./routes/pageRoutes";
+import { ThemeProvider } from "@mui/material/styles";
+import { dashboardTheme } from "./dashboardTheme";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route key={pageRoutes[0].id} path={pageRoutes[0].path} element={pageRoutes[0].element}>
-          {pageRoutes.map((page) => (
-            <Route
-              key={page.id}
-              path={page.path}
-              element={page.element}
-            />
-          ))}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={dashboardTheme}>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            key={pageRoutes[0].id}
+            path={pageRoutes[0].path}
+            element={pageRoutes[0].element}
+          >
+            {pageRoutes.map((page) => (
+              <Route key={page.id} path={page.path} element={page.element} />
+            ))}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 

@@ -40,7 +40,7 @@ const Register = () => {
 
   return (
     <Grid item xs={8}>
-      {/* <Box
+      <Box
         component="form"
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },
@@ -122,7 +122,7 @@ const Register = () => {
             Register
           </Button>
         </div>
-      </Box> */}
+      </Box>
     </Grid>
   );
 };
