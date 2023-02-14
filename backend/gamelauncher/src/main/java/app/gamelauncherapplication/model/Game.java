@@ -33,8 +33,8 @@ public class Game {
     private String coverImage;
     private String productImages;
     private int reviews;
-    private String minimumSystemRequirementsId;
-    private String recommendedSystemRequirementsId;
+    private String minimumSystemRequirements;
+    private String recommendedSystemRequirements;
 
     public Game() {}
 
@@ -64,6 +64,10 @@ public class Game {
     public void setId(Integer _id) {
         this.id = _id;
     }
+
+    public Integer getGameId() { return gameId; }
+
+    public void setGameId(Integer _gameId) { this.gameId = _gameId; }
 
     public String getTitle() {
         return title;

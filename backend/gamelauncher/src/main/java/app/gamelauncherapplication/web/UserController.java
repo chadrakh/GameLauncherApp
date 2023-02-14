@@ -27,10 +27,15 @@ public class UserController {
     }
 
 
+<<<<<<< HEAD
     @GetMapping("/{id}")
     public User get(@PathVariable Integer id) {
         User requestedUser = userService.getUser(id);
-
+=======
+    @GetMapping("/users/{userId}")
+    public User get(@PathVariable Integer userId) {
+        User requestedUser = userService.get(userId);
+>>>>>>> parent of 68bf353 (updated dto)
         if (requestedUser == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedUser;
@@ -42,8 +47,14 @@ public class UserController {
         return ResponseEntity.created(new URI("/users/" + savedUser.getId())).body(savedUser);
     }
 
+<<<<<<< HEAD
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
         userService.remove(id);
+=======
+    @DeleteMapping("/users/{userId}")
+    public void delete(@PathVariable Integer userId) {
+        userService.remove(userId);
+>>>>>>> parent of 68bf353 (updated dto)
     }
 }

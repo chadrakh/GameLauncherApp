@@ -28,7 +28,6 @@ public class GameController {
         return gameService.getUsers();
     }
 
-
     @GetMapping("/{id}")
     public Game get(@PathVariable Integer id) {
         Game requestedGame = gameService.getUser(id);
@@ -42,9 +41,9 @@ public class GameController {
         return savedGame;
     }
 
-    @DeleteMapping("/games/{id}")
-    public void delete(@PathVariable Integer id) {
-        gameService.remove(id);
+    @DeleteMapping("/games/{gameId}")
+    public void delete(@PathVariable Integer gameId) {
+        gameService.remove(gameId);
     }
 
 }
