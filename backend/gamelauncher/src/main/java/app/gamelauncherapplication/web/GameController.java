@@ -28,18 +28,18 @@ public class GameController {
         return gameService.getUsers();
     }
 
+
     @GetMapping("/{id}")
     public Game get(@PathVariable Integer id) {
         Game requestedGame = gameService.getUser(id);
-        if (requestedGame == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedGame;
     }
 
     @PostMapping("/games")
-    public ResponseEntity<Game> create(@RequestBody Game game) throws URISyntaxException {
+    public Game create(@RequestBody Game game) throws URISyntaxException {
         var savedGame = gameService.add(game);
-        return ResponseEntity.created(new URI("/games/" + savedGame.getId())).body(savedGame);
+        return savedGame;
     }
 
     @DeleteMapping("/games/{id}")

@@ -29,12 +29,12 @@ public class GameService {
         return gameRepository.findAll();
     }
 
-    public Game getUser(Integer gameId) {
-        return gameRepository.findById(gameId).orElse(null);
+    public Game getUser(Integer id) {
+        return gameRepository.findById(id).orElse(null);
     }
 
-    public void remove(Integer gameId) {
-        gameRepository.deleteById(gameId);
+    public void remove(Integer id) {
+        gameRepository.deleteById(id);
     }
 
     public static void mapGamesToDatabase() {

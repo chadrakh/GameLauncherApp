@@ -21,11 +21,11 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public User getUser(Integer userId) {
-        return userRepository.findById(userId).orElse(null);
+    public User getUser(Integer id) {
+        return userRepository.findById(id).orElse(null);
     }
 
-    public void remove(Integer userId) {
-        userRepository.deleteById(userId);
+    public void remove(Integer id) {
+        userRepository.deleteById(id);
     }
 }

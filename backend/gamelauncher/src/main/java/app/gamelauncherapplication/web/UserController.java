@@ -26,9 +26,11 @@ public class UserController {
         return userService.getUsers();
     }
 
+
     @GetMapping("/{id}")
     public User get(@PathVariable Integer id) {
         User requestedUser = userService.getUser(id);
+
         if (requestedUser == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedUser;
