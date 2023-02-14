@@ -2,9 +2,9 @@ import React from "react";
 import "./index.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { pageRoutes } from "./routes/pageRoutes";
+import { pageRoutes } from "./pages/Routes/PageRoutes";
 import { ThemeProvider } from "@mui/material/styles";
-import { dashboardTheme } from "./dashboardTheme";
+import { dashboardTheme } from "./DashboardTheme";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

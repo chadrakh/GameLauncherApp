@@ -1,40 +1,45 @@
 import React, { useState } from 'react';
 import Grid from '@mui/material/Grid';
-import StdMenu from '../../components/standard/stdMenu';
-import AccountControl from '../../components/AccountControl/AccountControl';
-import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
+
 
 const Home = () => {
-  const [open, setOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleOpen = (event) => {
-    console.log("handleOpen ran")
-    setAnchorEl(event.currentTarget);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const gridItems = [
+    {
+      id: 0,
+      label: "One",
+    },
+    {
+      id: 1,
+      label: "Two",
+    },
+    {
+      id: 2,
+      label: "Three",
+    },
+    {
+      id: 3,
+      label: "Four",
+    }
+  ];
 
   return (
     <Grid item xs={8}>
-      <Button
-        variant="default"
-      >
-        Login/Register
-      </Button>
-      <AccountControl
-        iconColor={"primary"}
-        anchorEl={anchorEl}
-        onClick={handleOpen}
-      />
-      <StdMenu
-        open={open}
-        anchorEl={anchorEl}
-        handleClose={handleClose}
-      />
+        <Grid container justifyContent="center" spacing={2}>
+          {gridItems.map(() => (
+            <Grid key={gridItems.id} item>
+              <Paper
+                sx={{
+                  height: 140,
+                  width: 350,
+                  backgroundColor: '#1A2027',
+                  color: '#fff',
+                }}
+              />
+              {gridItems.label}
+            </Grid>
+          ))}
+        </Grid>
     </Grid>
   )
 }

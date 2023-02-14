@@ -1,11 +1,13 @@
-const mainNavBarStyles = {
+const navBarStyles = {
     drawer: {
         width: 320,
+        fontWeight: 600,
         flexShrink: 0,
         '& .MuiDrawer-paper': {
-            width: 320,
+            width: 300,
             boxSizing: 'border-box',
-            backgroundColor: '#101F33',
+            backgroundColor: '#1A2027',
+            // backgroundColor: '#101F33',
         },
         '& .Mui-selected': {
             color: '#ffffff',
@@ -27,6 +29,4 @@ const mainNavBarStyles = {
     }
 };
 
-// const subNavBarStyles = {};
-
-export { mainNavBarStyles };
+export { navBarStyles };

@@ -28,9 +28,15 @@ public class GameController {
         return gameService.getUsers();
     }
 
+<<<<<<< HEAD
     @GetMapping("/{id}")
     public Game get(@PathVariable Integer id) {
         Game requestedGame = gameService.getUser(id);
+=======
+    @GetMapping("/games/{gameId}")
+    public Game get(@PathVariable  Integer gameId) {
+        Game requestedGame = gameService.get(gameId);
+>>>>>>> parent of 68bf353 (updated dto)
         if (requestedGame == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         return requestedGame;
@@ -42,9 +48,9 @@ public class GameController {
         return ResponseEntity.created(new URI("/games/" + savedGame.getId())).body(savedGame);
     }
 
-    @DeleteMapping("/games/{id}")
-    public void delete(@PathVariable Integer id) {
-        gameService.remove(id);
+    @DeleteMapping("/games/{gameId}")
+    public void delete(@PathVariable Integer gameId) {
+        gameService.remove(gameId);
     }
 
 }

@@ -11,6 +11,8 @@ public class User {
     @Id
     private Integer id;
 
+    private Integer userId;
+
     private String firstName;
 
     private String lastName;
@@ -31,6 +33,7 @@ public class User {
         this.password = _password;
     }
 
+<<<<<<< HEAD
     public Integer getId() {
         return id;
     }
@@ -51,6 +54,13 @@ public class User {
     public void setLastName(String _lastName) {
         this.lastName = _lastName;
     }
+=======
+    public Integer getUserId() { return userId; }
+
+    public void setUserId(Integer _userId) { this.userId = _userId; }
+
+    public String getFirstName() { return firstName; }
+>>>>>>> parent of 68bf353 (updated dto)
 
 
     public String getEmail() {

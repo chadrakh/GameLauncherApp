@@ -4,11 +4,10 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 
-const Login = () => {
-  const [btnDisabled, setBtnDisabled] = useState(true);
 
+const Login = () => {
   return (
-    <Grid  item xs={8}>
+    <Grid item>
       <Box
       component="form"
       sx={{
@@ -16,7 +15,7 @@ const Login = () => {
       }}
       noValidate
       autoComplete="off"
-    >
+      >
       <div>
         <TextField
           required
@@ -33,14 +32,10 @@ const Login = () => {
           InputLabelProps={{
             shrink: true,
           }}
-
-          onChange={(text) => setBtnDisabled(!text.target.value)}
         />
       </div>
       <div>
-        <Button 
-          disabled={btnDisabled}
-        >
+        <Button>
           Login
         </Button>
       </div>

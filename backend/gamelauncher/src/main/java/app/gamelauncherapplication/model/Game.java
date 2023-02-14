@@ -16,6 +16,7 @@ import java.util.List;
 public class Game {
     @Id
     private Integer id;
+    private Integer gameId;
 
     @NotEmpty
     private String title;
@@ -24,17 +25,17 @@ public class Game {
     private String summary;
     private String description;
     private String releaseDate;
-    private String developer;
-    private String publisher;
-    private String tags;
+    private List<String> developer;
+    private List<String> publisher;
+    private List<String> tags;
     private String rating;
-    private String ratingDescription;
+    private List<String> ratingDescription;
     private String trailerLink;
     private String coverImage;
-    private String productImages;
+    private List<String> productImages;
     private int reviews;
-    private String minimumSystemRequirementsId;
-    private String recommendedSystemRequirementsId;
+    private List<Object> minimumSystemRequirements;
+    private List<Object> recommendedSystemRequirements;
 
     public Game() {}
 
@@ -64,6 +65,10 @@ public class Game {
     public void setId(Integer _id) {
         this.id = _id;
     }
+
+    public Integer getGameId() { return gameId; }
+
+    public void setGameId(Integer _gameId) { this.gameId = _gameId; }
 
     public String getTitle() {
         return title;
