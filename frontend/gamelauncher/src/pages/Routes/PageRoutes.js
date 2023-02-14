@@ -1,10 +1,10 @@
-import App from "../App";
-import Home from "../pages/Home/Home";
-import Browse from "../pages/Browse/Browse";
-import Library from "../pages/Library/Library";
-import Support from "../pages/Support/Support";
-import Register from "../pages/Register/Register";
-import Login from "../pages/Login/Login";
+import App from "../../App";
+import Home from "../Home/Home";
+import Browse from "../Browse/Browse";
+import Library from "../Library/Library";
+import Support from "../Support/Support";
+import Register from "../Register/Register";
+import Login from "../Login/Login";
 
 export const pageRoutes = [
     {
